@@ -26,7 +26,7 @@ pub async fn fetch_transactions(address: &str, api_key: &str) -> Result<Value, r
         .build()?;
 
     let url = format!(
-        "{}?chainid={}&module=account&action=txlist&address={}&page=1&offset=10&sort=desc&apikey={}",
+        "{}?chainid={}&module=account&action=txlist&address={}&page=1&offset=100&sort=desc&apikey={}",
         ETHERSCAN_API_V2_URL, CHAINID, address, api_key
     );
 
