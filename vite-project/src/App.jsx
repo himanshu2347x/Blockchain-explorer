@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis, PieChart, Pie, Cell } from 'recharts';
+import { Area, AreaChart, CartesianGrid, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const GlassCard = ({ children, className = "" }) => (
   <div className={`backdrop-blur-xl bg-white/10 rounded-3xl p-6 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-500 hover:scale-[1.02] ${className}`}>
@@ -83,7 +83,7 @@ export default function App() {
       const txRes = await fetch(`http://127.0.0.1:3000/eth/transactions?address=${address}`);
       const txData = await txRes.json();
       if (txData.status === 'success' && txData.transactions) {
-        setTransactions(txData.transactions.slice(0, 15));
+        setTransactions(txData.transactions);
 
         const grouped = {};
         txData.transactions.forEach(tx => {
