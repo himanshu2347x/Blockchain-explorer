@@ -1,24 +1,54 @@
-# Logs
-logs
-*.log
+# Generated files
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# Remove Cargo.lock from gitignore if creating an executable, leave it for libraries
+# More information here https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html
+
+# IDE specific files
+.idea/
+# Node.js
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+.pnpm-debug.log*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-node_modules
-dist
-dist-ssr
-*.local
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# package managers
+package-lock.json
+yarn.lock
+.vscode/
+*.swp
+*.swo
+
+# OS specific files
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.env
+*.pdb
+
+# Debug files
+*.pdb
+*.dSYM/
+
+# Dependencies
+/vendor/
+
+# Build output
+/dist/
+/out/
+
+# Documentation
+/doc/
+/docs/target/

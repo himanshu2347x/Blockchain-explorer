@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Area, AreaChart, CartesianGrid, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const GlassCard = ({ children, className = "" }) => (
-  <div className={`backdrop-blur-xl bg-white/10 rounded-3xl p-6 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-500 hover:scale-[1.02] ${className}`}>
+  <div className={`backdrop-blur-2xl bg-gradient-to-br from-white/[0.12] via-white/[0.08] to-white/[0.05] rounded-3xl p-6 border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] hover:shadow-[0_8px_48px_0_rgba(31,38,135,0.5)] hover:border-white/40 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 ${className}`}>
     {children}
   </div>
 );
